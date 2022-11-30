@@ -1,0 +1,52 @@
+﻿@using System.Web.Helpers
+
+@model List<Product>
+@{
+}
+
+<h2>Ürün Listesi</h2>
+<hr/>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Code</th>
+            <th>ShortName</th>
+            <th>ManufacturerCode</th>
+            <th>Amount</th>
+            <th>KdvRate</th>
+            <th>Queue</th>
+            <th>SerialTracking</th>
+            <th>KdvRate</th
+            <th>ProductionDate</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Code</td>
+                <td>@item.ShortName</td>
+                <td>@item.ManufacturerCode</td>
+                <td>@item.Amount</td>
+                <td>@item.KdvRate</td>
+                <td>@item.Queue</td>
+                <td>@item.SerialTracking</td>
+                <td>@item.KdvRate</td>
+                <td>@item.ProductionDate</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Product/Edit?id">Düzenle</a>
+                    <a class="btn btn-danger btn-sm" href="/Product/Delete?id">Sil</a>
+
+                </td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>
